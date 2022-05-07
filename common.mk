@@ -353,6 +353,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Privapp-permissions
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.control_privapp_permissions=log
