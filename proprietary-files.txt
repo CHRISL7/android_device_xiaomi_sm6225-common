@@ -210,6 +210,12 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml|bedb01aed43b95943ac60f80c
 vendor/lib64/vendor.qti.hardware.factory@1.0.so|26587947997ade3f691c58176d76a9a706bd187b
 vendor/lib64/vendor.qti.hardware.factory@1.1.so|845ecda4dfe0b2a0fded2d944c12f5ac70e4f081
 
+# FM - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|e1034aede67671b58091dc987d789f3bbbe26ed4
+vendor/lib/vendor.qti.hardware.fm@1.0.so|c036fbe16575a800994792431d10f6d1173cea26
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|20617e5c5f367a3b74a7c441507b2fcfd22b949f
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|2f01b221540ba0c75b34f373b0b1201f10f9f8c0
+
 # GPS - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 vendor/bin/garden_app|987a4b0d1f2fc446e384f1d68b041819c8221d07
 vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
