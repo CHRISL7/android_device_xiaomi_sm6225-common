@@ -13,6 +13,13 @@
 // limitations under the License.
 
 prebuilt_etc {
+    name: "init_thermal-engine-v2.rc",
+    src: "init_thermal-engine-v2.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.bengal.rc",
     src: "init.bengal.rc",
     sub_dir: "init",

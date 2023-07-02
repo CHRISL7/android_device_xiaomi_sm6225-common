@@ -175,9 +175,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
 
 # Charger
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
-
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.quick.charge=1 \
     ro.charger.disable_init_blank=true
@@ -343,7 +340,7 @@ PRODUCT_COPY_FILES += \
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-    
+
 # Rootdir / Init files
 PRODUCT_PACKAGES += \
     init.goodix.events.sh \
@@ -354,6 +351,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
     fstab.zram \
+    init_thermal-engine-v2.rc \
     init.bengal.rc \
     init.bengal.perf.rc \
     init.target.rc \
@@ -443,6 +441,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.binary_xml=false
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti-v2
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
 
