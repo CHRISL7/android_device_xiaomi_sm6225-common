@@ -21,9 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Inherit from vendor
-$(call inherit-product, vendor/xiaomi/sm6225-common/sm6225-common-vendor.mk)
-
 # A/B
 ifeq ($(TARGET_IS_VAB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
@@ -303,7 +300,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
-#Media
+# Media
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     debug.stagefright.omx_default_rank=0 \
     media.aac_51_output_enabled=true \
@@ -315,13 +312,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
-
-PRODUCT_VENDOR_PROPERTIES += \
-    debug.stagefright.ccodec=1 \
-    debug.stagefright.omx_default_rank=0 \
-    debug.stagefright.omx_default_rank.sw-audio=1 \
-    vendor.media.target.version=3 \
-    vendor.sys.media.target.version=3
 
 # Netmgr
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -498,3 +488,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Zygote
 PRODUCT_SYSTEM_PROPERTIES += \
     zygote.critical_window.minute=10
+
+# Inherit from vendor
+$(call inherit-product, vendor/xiaomi/sm6225-common/sm6225-common-vendor.mk)
