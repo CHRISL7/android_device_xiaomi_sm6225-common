@@ -1,0 +1,6 @@
+# Power
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb(/.*)? u:object_r:vendor_sysfs_usb_supply:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery(/.*)? u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/qcom-battery/odm_battery(/.*)?  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0

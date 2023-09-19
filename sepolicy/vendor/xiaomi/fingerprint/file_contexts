@@ -6,22 +6,16 @@
 /data/vendor/fpdump(/.*)?                                               u:object_r:fingerprint_vendor_data_file:s0
 /mnt/vendor/persist/fpc(/.*)?                                           u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)?                                        u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/silead(/.*)?                                               u:object_r:vendor_fingerprint_data_file:s0
-/persist/silead(/.*)?                                                   u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/focaltech(/.*)?                                            u:object_r:fingerprint_vendor_data_file:s0
 /sys/devices/platform/soc/soc:fpc1020(/.*?)                             u:object_r:vendor_sysfs_fps_attr:s0
 
 # Fingerprint devices
-/dev/focaltech_fp                                                       u:object_r:fingerprint_device:s0
 /dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
-/dev/silead_fp                                                          u:object_r:fingerprint_device:s0
-/dev/silead_s*                                                          u:object_r:fingerprint_device:s0
-/dev/spidev.*                                                           u:object_r:fingerprint_device:s0
 /sys/bus/platform/devices/soc:fpc1020/wakeup_enable                     u:object_r:fingerprint_device:s0
 /sys/bus/platform/devices/soc:fpc1020/irq                               u:object_r:fingerprint_device:s0
 /sys/bus/platform/devices/soc:fpc1020/hw_reset                          u:object_r:fingerprint_device:s0
 
-
 # Fingerprint HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi          u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                                    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service_lc u:object_r:hal_fingerprint_default_exec:s0
+
+# Fix Goodix events
+/vendor/bin/init.goodix.events.sh                                       u:object_r:vendor_goodix_events_exec:s0

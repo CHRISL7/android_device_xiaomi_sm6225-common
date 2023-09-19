@@ -1,3 +1,6 @@
+unix_socket_connect(hal_audio_default, property, init)
+unix_socket_connect(hal_audio_default, property, hal_sensors_default)
+
 # Allow Audio hal to access calibration files in /mnt/vendor/persist/audio
 allow hal_audio_default vendor_persist_audio_file:file rw_file_perms;
 allow hal_audio_default mnt_vendor_file:dir r_dir_perms;
@@ -19,10 +22,8 @@ allow hal_audio_default fwk_sensor_hwservice:hwservice_manager find;
 # Allow Audio hal to set audio properties
 allow hal_audio_default vendor_audio_prop:property_service set;
 set_prop(hal_audio_default, vendor_audio_prop)
+set_prop(hal_audio_default, vendor_audio_prop)
 
 # Dirac
 get_prop(hal_audio_default, dirac_prop)
 set_prop(hal_audio_default, dirac_prop)
-
-unix_socket_connect(hal_audio_default, property, init)
-unix_socket_connect(hal_audio_default, property, hal_sensors_default)

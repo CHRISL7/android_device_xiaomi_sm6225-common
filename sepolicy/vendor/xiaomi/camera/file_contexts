@@ -11,6 +11,8 @@
 /vendor/lib(64)?/libxml2_vendor\.so                   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSuperSensor\.so                   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSuperSensorCPU\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_aio_seg\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_ai_vision\.so              u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libHalSuperSensorServer\.so          u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSuperSensor_skel\.so              u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_beautyshot\.so            u:object_r:same_process_hal_file:s0
@@ -43,6 +45,7 @@
 /vendor/lib(64)?/libmiai_portraitsupernight\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsymphony-cpu\.so                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmiai_supernight\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiphone_capture_bokeh\.so         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_dualcam_refocus_image\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_dualcam_refocus_video\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_portrait_lighting\.so     u:object_r:same_process_hal_file:s0
