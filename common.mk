@@ -156,6 +156,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Device Settings
 PRODUCT_PACKAGES += \
+    KeyHandler \
     XiaomiParts
 
 PRODUCT_COPY_FILES += \
