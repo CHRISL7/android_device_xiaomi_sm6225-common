@@ -84,6 +84,13 @@ on property:vendor.post_boot.parsed=1
     write /dev/stune/top-app/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 10
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+    # Enable idle state listener
+    write /sys/devices/platform/soc/5e00000.qcom,mdss_md/idle_encoder_mask 1
+    write /sys/devices/platform/soc/5e00000.qcom,mdss_md/idle_timeout_ms 100
+
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
     setprop dalvik.vm.dex2oat-threads 6

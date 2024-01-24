@@ -340,6 +340,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
+# Power
+BOARD_VENDOR := xiaomi
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.xiaomi-libperfmgr \
+    libqti-perfd-client
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.extension_library=libqti-perfd-client.so
+
 # Privapp-permissions
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.control_privapp_permissions=log
