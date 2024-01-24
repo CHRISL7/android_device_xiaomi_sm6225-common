@@ -43,9 +43,6 @@
         <item>"/system/bin/surfaceflinger"</item>
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
-        <item>"/system/framework/QPerformance.jar"</item>
-        <item>"/system/framework/QXPerformance.jar"</item>
-        <item>"/system/framework/UxPerformance.jar"</item>
         <item>"/system/lib64/libEGL.so"</item>
         <item>"/system/lib64/libGLESv2.so"</item>
         <item>"/system/lib64/libhwui.so"</item>
@@ -63,5 +60,8 @@
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
     </string-array>
+
+    <!-- Whether device supports QTI Boost Framework -->
+    <bool name="config_supportsBoostFramework">false</bool>
 
 </resources>

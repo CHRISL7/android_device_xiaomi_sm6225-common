@@ -64,9 +64,6 @@ r_dir_file(hal_fingerprint_default, vendor_sysfs_graphics)
 # Allow hal_fingerprint_default to read in rootfs
 r_dir_file(hal_fingerprint_default, rootfs)
 
-# Allow hal_fingerprint_default to get IPerf interface
-binder_call(hal_fingerprint_default, vendor_hal_perf_default)
-
 # Allow hal_fingerprint_default to set fingerprint properties
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
 get_prop(hal_fingerprint_default, vendor_fingerprint_prop)

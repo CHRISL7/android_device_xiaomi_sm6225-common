@@ -320,7 +320,6 @@ PRODUCT_COPY_FILES += \
     
 # Rootdir / Init files
 PRODUCT_PACKAGES += \
-    init.qti.dcvs.sh \
     init.qti.early_init.sh
 
 PRODUCT_PACKAGES += \
@@ -337,12 +336,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
+# Perf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # Privapp-permissions
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
 # QC common
 TARGET_BOARD_PLATFORM := bengal
+TARGET_PROVIDES_POWERHAL := true
+
+PRODUCT_ODM_PROPERTIES += \
+    vendor.audio.feature.kpi_optimize.enable=false
 
 TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
@@ -356,7 +363,6 @@ TARGET_COMMON_QTI_COMPONENTS += \
     keymaster \
     media \
     overlay \
-    perf \
     telephony \
     usb \
     vibrator \
