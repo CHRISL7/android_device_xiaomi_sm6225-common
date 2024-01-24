@@ -38,4 +38,30 @@
     <!-- Whether to show WiFi/Hotspot standard -->
     <bool name="config_show_network_standard">true</bool>
 
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/QPerformance.jar"</item>
+        <item>"/system/framework/QXPerformance.jar"</item>
+        <item>"/system/framework/UxPerformance.jar"</item>
+        <item>"/system/lib64/libEGL.so"</item>
+        <item>"/system/lib64/libGLESv2.so"</item>
+        <item>"/system/lib64/libhwui.so"</item>
+        <item>"/system/system_ext/priv-app/ParanoidSystemUI/ParanoidSystemUI.apk"</item>
+        <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
+        <item>"/vendor/lib64/libipebpsstriping170.so"</item>
+        <item>"/vendor/lib64/libipebpsstriping.so"</item>
+        <item>"/vendor/lib64/egl/libEGL_adreno.so"</item>
+        <item>"/vendor/lib64/egl/libGLESv2_adreno.so"</item>
+        <item>"/vendor/lib64/libCB.so"</item>
+        <item>"/vendor/lib64/libgsl.so"</item>
+        <item>"/vendor/lib64/libllvm-glnext.so"</item>
+        <item>"/vendor/lib64/libllvm-qcom.so"</item>
+        <item>"/vendor/lib64/libllvm-qgl.so"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+    </string-array>
+
 </resources>
