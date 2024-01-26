@@ -342,6 +342,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 BOARD_VENDOR := xiaomi
+TARGET_USES_LIBPERFMGR := true
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client
