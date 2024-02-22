@@ -14,6 +14,8 @@
 
 # Platform
 TARGET_BOARD_PLATFORM := bengal
+TARGET_BOARD_SUFFIX := _515
+TARGET_KERNEL_VERSION := 5.15
 
 # Include GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
