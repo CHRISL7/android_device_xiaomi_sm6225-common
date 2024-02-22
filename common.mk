@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Platform
+TARGET_BOARD_PLATFORM := bengal
+
 # Include GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
@@ -346,7 +349,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # QC common
-TARGET_BOARD_PLATFORM := bengal
 
 TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
