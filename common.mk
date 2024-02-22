@@ -349,6 +349,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # QC common
+TARGET_GPS_COMPONENT_VARIANT := gps
+TARGET_MEDIA_COMPONENT_VARIANT := media
+TARGET_WLAN_COMPONENT_VARIANT := wlan
+TARGET_USE_AIDL_QTI_HEALTH := true
 
 TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
