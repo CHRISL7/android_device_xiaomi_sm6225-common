@@ -295,6 +295,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
 
+# NDK
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
 # Netmgr
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.data.netmgrd.qos.enable=true
