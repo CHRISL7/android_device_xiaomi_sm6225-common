@@ -78,26 +78,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.offload.buffer.size.kb=256
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.config.vc_call_vol_steps=11
-
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.audio.ozo.codec.enable=true \
-    ro.audio.monitorRotation=true \
-    ro.vendor.audio.afe.record=true \
-    ro.vendor.audio.misound.bluetooth.enable=true \
-    ro.vendor.audio.scenario.support=false \
-    ro.vendor.audio.soundfx.type=mi \
-    ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.sfx.earadj=true \
-    ro.vendor.audio.sfx.scenario=false \
-    ro.vendor.audio.spk.clean=true \
-    ro.vendor.audio.sos=true \
-    ro.vendor.audio.surround.support=false \
-    ro.vendor.audio.vocal.support=false \
-    ro.vendor.audio.voice.change.support=true \
-    ro.vendor.audio.voice.change.version=2 \
-    vendor.audio.chk.cal.us=0
+    debug.stagefright.c2inputsurface=-1 \
+    ro.audio.monitorRotation=true
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -187,7 +170,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.dpmhalservice.enable=1
+    persist.vendor.dpm.vndr.idletimer.mode=default \
+    persist.vendor.dpm.vndr.halservice.enable=1 \
+    persist.vendor.dpm.vndr.feature=1
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -270,6 +255,9 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor
 
+PRODUCT_ODM_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_khaje_v0.xml
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.aac_51_output_enabled=true \
     media.stagefright.enable-aac=true \
@@ -280,6 +268,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.mediaserver.64b.enable=true
 
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
@@ -354,20 +345,20 @@ TARGET_COMMON_QTI_COMPONENTS += \
 
 # Radio
 PRODUCT_PRODUCT_PROPERTIES += \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+    persist.vendor.ims.no_stapa=1 \
+    persist.vendor.radio.enable_temp_dds=true \
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    ro.vendor.radio.features_common=3 \
+    ro.vendor.radio.fastdormancy=true
 
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.data.iwlan.enable=true \
-    persist.vendor.radio.add_power_save=0 \
-    persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.enable_temp_dds=true \
-    persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.mt_sms_ack=30 \
-    persist.vendor.radio.process_sups_ind=1 \
-    ro.vendor.radio.features_common=3 \
     ro.vendor.se.type=HCE,UICC \
-    sys.vendor.shutdown.waittime=500
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.snapshot_enabled=1 \
+    persist.vendor.radio.snapshot_timer=5 \
+    persist.vendor.radio.manual_nw_rej_ct=1 \
+    persist.vendor.radio.atfwd.start=true
 
 # Sensors
 PRODUCT_PACKAGES += \
