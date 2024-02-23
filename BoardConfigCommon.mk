@@ -122,9 +122,6 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3
 
-# Media
-TARGET_DISABLED_UBWC := true
-
 # Partitions
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 6442450944

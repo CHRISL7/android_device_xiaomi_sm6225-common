@@ -71,11 +71,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service
-
 PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.audio.feature.dynamic_ecns.enable=false \
     vendor.audio.offload.buffer.size.kb=256
 
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -99,33 +95,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.voice.change.version=2 \
     vendor.audio.chk.cal.us=0
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
-    ro.vendor.audio.soundtrigger.appdefine.gmm.level=55 \
-    ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=50 \
-    ro.vendor.audio.soundtrigger.appdefine.vop.level=10 \
-    ro.vendor.audio.soundtrigger.lowpower=true \
-    ro.vendor.audio.soundtrigger.training.level=50 \
-    ro.vendor.audio.soundtrigger.xanzn.cnn.level=70 \
-    ro.vendor.audio.soundtrigger.xanzn.gmm.level=45 \
-    ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=30 \
-    ro.vendor.audio.soundtrigger.xanzn.vop.level=10 \
-    ro.vendor.audio.soundtrigger.xatx.cnn.level=27 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.level=50 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40 \
-    ro.vendor.audio.soundtrigger.xatx.vop.level=10 \
-    ro.vendor.audio.soundtrigger=sva
-
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hardware.power.idle_cur_ma=7 \
     bluetooth.hardware.power.operating_voltage_mv=3700 \
     bluetooth.hardware.power.rx_cur_ma=75 \
     bluetooth.hardware.power.tx_cur_ma=93
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.sys.btsatck.absvolfeature=true \
-    persist.vendor.service.bdroid.soc.alwayson=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
@@ -170,16 +145,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.vendor.quick.charge=1 \
-    ro.charger.disable_init_blank=true
-
 # Crypto
 PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.allow_encrypt_override=true \
-    ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.crypto.volume.metadata.method=dm-default-key
+    ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Device Settings
 PRODUCT_PACKAGES += \
@@ -187,13 +156,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
-
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.audio.soundfx.dirac=true \
-    persist.audio.dirac.speaker=true \
-    persist.dirac.acs.controller=qem \
-    persist.dirac.acs.storeSettings=1 \
-    persist.dirac.acs.ignore_error=1
 
 # Cutout
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -268,12 +230,6 @@ PRODUCT_VENDOR_PROPERTIES += \
    ro.hardware.vulkan=adreno \
    ro.opengles.version=196610
 
-# GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
-
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
@@ -291,12 +247,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
-# LMK
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.lmk.filecache_min_kb=153600  \
-    ro.lmk.kill_timeout_ms=50 \
-    ro.lmk.stall_limit_critical=40
 
 # Media
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -324,10 +274,6 @@ PRODUCT_PACKAGES += \
     BengalSystemUIOverlay \
     BengalWifiOverlay \
     WifiMainline
-
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Public libraries
 PRODUCT_COPY_FILES += \
@@ -453,13 +399,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.wlan.dbs=0 \
     ro.hardware.wlan.mimo=0 \
     ro.hardware.wlan.vendor=qcom
-
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.telephony.iwlan_operation_mode=legacy
-
-# Zygote
-PRODUCT_SYSTEM_PROPERTIES += \
-    zygote.critical_window.minute=10
 
 # Inherit from vendor
 $(call inherit-product, vendor/xiaomi/sm6225-common/sm6225-common-vendor.mk)
