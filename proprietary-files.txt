@@ -24,10 +24,12 @@ vendor/lib/soundfx/libqcbassboost.so|cc5ec98ec56b02bdb9f6b1de0a2a4e0f2b18c315
 vendor/lib/soundfx/libqcreverb.so|ee603092ab4e939eb289d35a17bddd37f7f9835f
 vendor/lib/soundfx/libqcvirt.so|67da89cce00148dddeb4991697c9773376e39d8b
 vendor/lib/soundfx/libshoebox.so|214d5fefd21c617bdfa05255fe667127b4242556
-
-# libbatterylistener - from LA.UM.9.15.2.r1-10100-KAMORTA.QSSI14.0
-vendor/lib/libbatterylistener.so|71b4da03bdc4522b8829370093ebca3c90e86799
-vendor/lib64/libbatterylistener.so|ebd7be328d91c09eaf2073f78cb31560a882438b
+vendor/lib64/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
+vendor/lib64/soundfx/libmisoundfx.so|f16d3828236fb590ff8cf529175c92cab173c940
+vendor/lib64/soundfx/libqcbassboost.so|cc5ec98ec56b02bdb9f6b1de0a2a4e0f2b18c315
+vendor/lib64/soundfx/libqcreverb.so|ee603092ab4e939eb289d35a17bddd37f7f9835f
+vendor/lib64/soundfx/libqcvirt.so|67da89cce00148dddeb4991697c9773376e39d8b
+vendor/lib64/soundfx/libshoebox.so|214d5fefd21c617bdfa05255fe667127b4242556
 
 # Bluetooth - from LA.UM.9.15.2.r1-10100-KAMORTA.QSSI14.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|b0f73b4ac1a88607ec90b514b9602de423bb9be6
